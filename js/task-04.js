@@ -4,15 +4,10 @@ const counter = document.getElementById("value");
 
 let counterValue = 0;
 
-const plusClicked = () => {
-  counterValue++;
-  counter.innerHTML = counterValue;
-};
+const counterPrint = () => (counter.innerHTML = counterValue);
 
-const minusClicked = () => {
-  counterValue--;
-  counter.innerHTML = counterValue;
-};
+const plusClicked = () => counterPrint(counterValue++);
+const minusClicked = () => counterPrint(counterValue--);
 
 inc.addEventListener("click", plusClicked);
 dec.addEventListener("click", minusClicked);
