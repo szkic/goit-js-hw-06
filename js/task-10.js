@@ -32,4 +32,7 @@ createBtn.addEventListener("click", createBoxes);
 
 // DELETE ELEMENTS
 const destroyBoxes = () => (boxEls.innerHTML = "");
-destroyBtn.addEventListener("click", () => destroyBoxes());
+destroyBtn.addEventListener("click", () => {
+  destroyBoxes();
+  dimensions = 20;
+});
